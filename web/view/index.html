@@ -75,12 +75,11 @@
        $('.btn').click(function(){
            const url = 'https://app-cors-policy-api.herokuapp.com/'
 
-           const config = { method:'GET', 
+           const config = { 
+                            method:'GET', 
                             mode:'cors', 
-                            header:{
-                                'Accesss-Control-Allow-Origin':'https://app-cors-policy-app.herokuapp.com/'
+                            origin: 'https://app-cors-policy-app.herokuapp.com/'
                         }
-                    }
 
            fetch(url,config).then(response => console.log(response.json()))
                             // .then(response =>{
