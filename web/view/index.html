@@ -77,8 +77,11 @@
 
            const config = { 
                             method:'GET', 
-                            mode:'cors', 
-                            origin: 'https://app-cors-policy-app.herokuapp.com/'
+                            mode:'cors',
+                            header:{
+                                'Content-type':'application/json',
+                                'Accesss-Control-Allow-Origin':'https://app-cors-policy-app.herokuapp.com/'
+                            }
                         }
 
            fetch(url,config).then(response => console.log(response.json()))
